@@ -60,6 +60,8 @@ color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
+
 }
 
 .todo li {
@@ -76,9 +78,69 @@ color: white;
 }
 
 .complete-btn {
-    background: #e4658d;
+    background: #e46565;
 
 }
 
 .trash-btn:hover, .complete-btn:hover {
 background: rgb(214, 169, 250);
+}
+
+.todo-item {
+    padding: 0rem 04.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.completed .complete-btn {
+    background: #65e478;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+-webkit-appearance: none;
+-moz-appearance: non;
+appearance: none;
+outline: none;
+border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+color: #ef629f;
+width: 10rem;
+cursor: pointer;
+padding: 1rem;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    background-color: #eb4d92;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #eb4d92;
+}
